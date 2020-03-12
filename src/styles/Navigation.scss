@@ -1,3 +1,7 @@
+body{
+  background-color: #eeecec;
+}
+
 .main_h {
     // position: fixed;
     // top: 0px;
@@ -7,13 +11,11 @@
     padding-top: 17px;
     margin-bottom: 20px;
     background: none;
-    overflow: hidden;
+    // overflow: hidden;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    padding-bottom: 6px;
     font-family: "Montserrat", sans-serif;
     background-color: rgba(255, 255, 255, 0.93);
-    border-bottom: 1px solid gainsboro;
 
     
       
@@ -42,35 +44,62 @@
       }
 
       .logo img{
-          height: 150px;
+          height: 130px;
+      }
+
+      .dropdown{
+        margin-top: 15px;
+        z-index: 2000;
+        position: absolute;
+        overflow: visible;
+        background-color: rgb(233, 233, 233);
+        box-shadow: 4px 4px 9px #888888;
+        display: none;
+        // box-shadow: 10px 10px 8px 10px #888888;
+      }
+      .showdown{
+        display: block;
+      }
+      .dropdown a{
+        padding: 20px 45px 20px 45px;
+        display: block;
+        color: #3f51b5 !important;
       }
 
       @media only screen and (max-width: 766px) {
         .logo {
           float: none;
         }
+        .logo img {
+          width: 80%;
+          height: auto;
+        }
+        .dropdown{
+          position: static;
+        }
       }
       
-      nav {
-          margin-top: 100px;
-        float: right;
-      }
       @media only screen and (max-width: 766px) {
         nav {
           width: 100%;
+          display: none;
+        }
+        .open-nav nav{
+          display: block;
         }
       }
       nav ul {
         list-style: none;
         overflow: hidden;
-        text-align: right;
-        float: right;
+        text-align: center;
+        margin-bottom: 0;
+        padding-bottom: 15px;
       }
       @media only screen and (max-width: 766px) {
         nav ul {
           padding-top: 10px;
           margin-bottom: 22px;
-          float: left;
+          // float: left;
           text-align: center;
           width: 100%;
           padding-left: 0;
@@ -92,6 +121,7 @@
         color: #888888;
         text-transform: uppercase;
         font-size: 1em;
+        padding: 10px;
       }
       
       .mobile-toggle {
@@ -106,9 +136,18 @@
         -moz-transition: all 200ms ease-in;
         transition: all 200ms ease-in;
       }
+      
+      .row {
+        margin: 0 auto;
+        position: relative;
+        padding: 0 2%;
+      } 
       @media only screen and (max-width: 766px) {
         .mobile-toggle {
           display: block;
+        }
+        .row{
+          padding: 0;
         }
       }
       .mobile-toggle span {
@@ -120,11 +159,6 @@
         display: block;
       }
       
-      .row {
-        margin: 0 auto;
-        position: relative;
-        padding: 0 2%;
-      }
       
     //   * {
     //     box-sizing: border-box;
